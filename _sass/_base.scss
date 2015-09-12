@@ -1,0 +1,40 @@
+.navbar-default
+{
+
+.navbar-nav>.cart>a {
+  border: 1px solid #3498DB;
+  color: #fff;
+  background-color: #3498DB;
+  a.hover{
+      color: #6BB9F0;
+  }
+ }
+} 
+#main{
+  #search-box{
+      width: 93%;
+      display: inline;
+  }
+  .search-top{
+      font-weight: bold;
+  }
+  .brand-top{
+      font-weight: bold;
+  }
+  .single-grid{
+    border: 1px solid #E4F1FE;
+    background-color: #E4F1FE;
+    margin-top: 4vmin;
+    padding: 12px 12px 20px;
+    .single-grid.hover{
+      border: 1px solid black;
+    }
+    .rupee{
+      font-size: 2em;
+      text-align: center;
+    }
+    .cart{
+      margin-top: 2.8vmin;
+    }
+  }
+}

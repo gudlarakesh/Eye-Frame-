@@ -1,0 +1,93 @@
+---
+layout: default
+---
+{% raw %}
+  <div class="container" id= "main" ng-app="myEye">
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <form class="form-inline">
+          <div class="form-group search-bar">
+            <input type="text" class="form-control" id="search-box" placeholder="search" ng-model="query" size="55">
+          </div>
+          <button type="submit" class="btn btn-default">Search</button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="row" ng-controller="ProductsCtrl as product">
+      <div class="col-md-3 product">
+        <p class="search-top">Search Preferance</p>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="">
+            Men
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="">
+            Women
+          </label>
+        </div>
+        <!-- <hr width="15%" class="pull-left"> -->
+        <p class="brand-top">Brand Preferance</p>
+         <div class="checkbox">
+          <label>
+            <input type="checkbox" value="">
+            Ray-Ban
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="">
+            Titan Eye +
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="">
+            Fasttrack
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="">
+            Nine West
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="">
+            Vogue
+          </label>
+        </div>
+        <p>Price Range</p>
+      </div>
+      <div class="col-md-9">
+        <div class="single-grid col-xs-4 col-md-3" ng-repeat="item in product.all">
+         <!-- <img src="../images/{{item.imagename}}.jpg" class="img-thumbnail" alt=""> -->
+         <p>{{item.name}}</p>
+          <div class="btn btn-primary cart" data-toggle="modal" data-target=".{{item.ID}}-modal-lg">
+            <i class="fa fa-shopping-cart"></i>
+          </div>
+          <div class="modal fade {{item.ID}}-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+               <!-- <img src="../images/{{item.imagename}}.jpg" class="img-thumbnail" alt=""> -->
+               <p>{{item.name}}</p>
+               <h3><span>&#8377;</span>Price:{{item.price}} </h3>
+              </div>
+            </div>
+          </div>
+          <h4>{{item.brand}}</h4>
+          <span class="pull-right rupee">Price:&#8377;{{item.price}}</span>
+        </div>
+        <div class="col-xs-4 col-md-4">
+          
+        </div>
+      </div>
+    </div>
+
+  </div>
+{% endraw %}
